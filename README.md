@@ -21,6 +21,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [x] List anything else that you can get done to improve the app functionality!
+* [ ] Allow users to prioritize their todo items by adding a priority level or sorting them based on due dates or importance
 
 ## Video Walkthrough
 
