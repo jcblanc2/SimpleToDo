@@ -4,7 +4,7 @@
 
 Submitted by: **John Clayton**
 
-Time spent: **1h** hours spent in total
+Time spent: **1h:30m** hours spent in total
 
 ## User Stories
 
