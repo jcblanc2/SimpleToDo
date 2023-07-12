@@ -1,10 +1,10 @@
-# Project 1 - Simple ToDo
+# Project 1 - *Simple ToDo*
 
-Simple ToDo is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
+**Simple ToDo** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
 
-Submitted by: John Clayton Blanc
+Submitted by: **John Clayton**
 
-Time spent: 3 hours spent in total
+Time spent: **1h** hours spent in total
 
 ## User Stories
 
@@ -26,17 +26,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/simpletodo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright 2022 John Clayton Blanc 
+    Copyright 2023 John Clayton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

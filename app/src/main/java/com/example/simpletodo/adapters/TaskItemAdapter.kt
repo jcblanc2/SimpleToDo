@@ -1,7 +1,5 @@
-package com.example.simpletodo
+package com.example.simpletodo.adapters
 
-import android.provider.ContactsContract
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  *  A bridge that tells the recyclerView how to display the data we give it
  */
-class TaskItemAdapter(var listOfItems : List<String>, val longClickListener: OnLongClickListener) :
+class TaskItemAdapter(var listOfItems : List<String>, val longClickListener: OnLongClickListener, val clickListener : OnClickListener) :
     RecyclerView.Adapter<TaskItemAdapter.ViewHolder>() {
 
     interface OnLongClickListener{
         fun onItemLongClicked(position: Int)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskItemAdapter.ViewHolder {
+    interface OnClickListener{
+        fun onItemClicked(position: Int)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
 
@@ -26,7 +28,7 @@ class TaskItemAdapter(var listOfItems : List<String>, val longClickListener: OnL
         return ViewHolder(contactView)
     }
 
-    override fun onBindViewHolder(holder: TaskItemAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = listOfItems.get(position)
         holder.textView.text = item
     }
@@ -34,7 +36,6 @@ class TaskItemAdapter(var listOfItems : List<String>, val longClickListener: OnL
     override fun getItemCount(): Int {
         return listOfItems.size
     }
-
 
     // Provide a direct reference to each of the views within a data item and u
     // Used to cache the views within the item layout for fast access
@@ -49,6 +50,10 @@ class TaskItemAdapter(var listOfItems : List<String>, val longClickListener: OnL
             itemView.setOnLongClickListener {
                 longClickListener.onItemLongClicked(adapterPosition)
                 true
+            }
+
+            itemView.setOnClickListener {
+                clickListener.onItemClicked(adapterPosition)
             }
         }
     }
